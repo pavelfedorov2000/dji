@@ -778,6 +778,7 @@ img {
 }
 
 .header__top {
+  background-color: #fff;
   padding: 10px 0;
 }
 
@@ -807,6 +808,31 @@ img {
 .header__phone svg {
   width: 18px;
   height: 19px;
+}
+
+.header__contacts {
+  position: absolute;
+  top: calc(100% + 15px);
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+  z-index: 100;
+  background-color: #fff;
+  -webkit-box-shadow: 0px 5px 25px rgba(51, 51, 51, 0.25);
+          box-shadow: 0px 5px 25px rgba(51, 51, 51, 0.25);
+  border-radius: 3px;
+  padding: 0 15px;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: .3s all;
+  -o-transition: .3s all;
+  transition: .3s all;
+}
+
+.header__contacts--active {
+  visibility: visible;
+  opacity: 1;
 }
 
 .header__search-btn {
@@ -945,7 +971,7 @@ img {
   color: #2C2C2C;
 }
 
-.top-header__phone svg {
+.top-header__phone > svg {
   margin-right: 10px;
 }
 
@@ -966,15 +992,28 @@ img {
   background-color: #d9d9d9;
 }
 
-.top-header__phone:after {
-  right: 0;
+.top-header__phone-drop {
   width: 20px;
   height: 20px;
   background-color: #F4F5F7;
   border-radius: 3px;
-  background-image: url(../img/icons/drop.svg);
-  background-position: center;
-  background-repeat: no-repeat;
+  -webkit-transition: .3s transform;
+  -o-transition: .3s transform;
+  transition: .3s transform;
+  margin-left: 5px;
+}
+
+.top-header__phone-drop svg {
+  width: 10px;
+  height: 6px;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+
+.top-header__phone-drop--active {
+  -webkit-transform: rotate(-180deg);
+      -ms-transform: rotate(-180deg);
+          transform: rotate(-180deg);
 }
 
 .top-header__call-btn {
@@ -1311,31 +1350,32 @@ img {
   margin-bottom: 25px;
 }
 
-.burger-menu__contact-item {
+.contacts__item {
+  white-space: nowrap;
   font-size: 14px;
   line-height: 20px;
   color: #000000;
   padding: 10px 0;
 }
 
-.burger-menu__contact-item:not(:last-child) {
+.contacts__item:not(:last-child) {
   border-bottom: 1px solid #F7F8F9;
 }
 
-.burger-menu__contact-item div span {
+.contacts__item div span {
   font-size: 11px;
   color: #6B6F81;
   display: block;
 }
 
-.burger-menu__contact-item > span {
+.contacts__item > span {
   font-size: 20px;
   line-height: 20px;
   color: #DDDDDD;
   margin-right: 12px;
 }
 
-.burger-menu__contact-item svg {
+.contacts__item svg {
   width: 14px;
   height: 14px;
   -ms-flex-negative: 0;
@@ -1354,6 +1394,11 @@ img {
 .footer__top {
   border-bottom: 1px solid rgba(196, 196, 196, 0.2);
   padding: 15px 0;
+}
+
+.footer__callback,
+.footer__menu-item--more {
+  color: #1AA0E8;
 }
 
 .footer__social {
@@ -1497,7 +1542,6 @@ img {
 
 .about {
   padding: 50px 0 40px;
-  background-color: #f5f5f5;
 }
 
 .about__text {
@@ -1508,6 +1552,12 @@ img {
 .about__cards {
   grid-gap: 30px;
   margin-top: 7px;
+}
+
+.about-card {
+  -webkit-transition: .3s box-shadow;
+  -o-transition: .3s box-shadow;
+  transition: .3s box-shadow;
 }
 
 .about-card__img {
@@ -1536,8 +1586,6 @@ img {
       -ms-flex: 1 1 auto;
           flex: 1 1 auto;
   background-color: #FFFFFF;
-  -webkit-box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.04);
-          box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.04);
   padding: 64px 30px 25px;
 }
 
@@ -1981,7 +2029,7 @@ img {
     width: 38.73239%;
   }
 
-  .top-header__phone:after {
+  .top-header__phone-drop {
     background-color: transparent;
   }
 
@@ -2721,6 +2769,11 @@ img {
 
   .footer a.footer__menu-item:hover {
     color: #1AA0E8;
+  }
+
+  .about-card:hover {
+    -webkit-box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.04);
+            box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.04);
   }
 
   .sale-card:hover {

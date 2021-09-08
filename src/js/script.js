@@ -34,6 +34,23 @@ window.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+
+    // Contacts drop
+    const contactsDropBtn = document.querySelector('.top-header__phone-drop');
+    const contactsDrop = document.querySelector('.header__contacts');
+
+    contactsDropBtn.addEventListener('click', () => {
+        contactsDropBtn.classList.toggle('top-header__phone-drop--active');
+        contactsDrop.classList.toggle('header__contacts--active');
+    });
+
+    document.addEventListener('mouseup', (e) => {
+        if (e.target !== contactsDrop && e.target !== contactsDropBtn) {
+            contactsDropBtn.classList.remove('top-header__phone-drop--active');
+            contactsDrop.classList.remove('header__contacts--active');
+        }
+    });
+
     // Search
     const searchBtn = document.querySelector('.header__search-btn');
     const dropSearch = document.querySelector('.drop-search');
@@ -76,8 +93,7 @@ window.addEventListener('DOMContentLoaded', () => {
     // Sliders
     const iconsSlider = new Swiper('.icons-slider', {
         slidesToShow: 'auto',
-        slidesToScroll: 3,
-        //loop: true,
+        freeMode: true,
         spaceBetween: 48,
     });
     
@@ -87,6 +103,10 @@ window.addEventListener('DOMContentLoaded', () => {
         navigation: {
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',
+        },
+        speed: 1000,
+        autoplay: {
+            delay: 3000,
         },
         breakpoints: {
             768: {

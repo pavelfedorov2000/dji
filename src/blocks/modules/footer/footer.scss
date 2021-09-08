@@ -22,9 +22,10 @@
         }
     }
 
-    // .footer__logo
-
-    &__logo {}
+    &__callback,
+    &__menu-item--more {
+        color: $blue;
+    }
 
     // .footer__social
 

@@ -1,6 +1,6 @@
 <header class="header">
     <div class="header__top top-header">
-        <div class="container header__top-inner flex jcsb aic">
+        <div class="container flex jcsb aic">
             <div class="top-header__address flex aic">
                 <svg>
                     <use xlink:href="img/sprite.svg#pin"></use>
@@ -18,12 +18,53 @@
                     <use xlink:href="img/sprite.svg#inst"></use>
                 </svg>
             </a>
-            <a href="tel:+375299001001" class="top-header__phone flex aic">
+            <div class="top-header__phone flex aic">
                 <svg>
                     <use xlink:href="img/sprite.svg#call"></use>
                 </svg>
-                +375 29 9-001-001
-            </a>
+                <a href="tel:+375299001001">+375 29 9-001-001</a>
+                <button class="top-header__phone-drop flex jcc aic" type="button">
+                    <svg>
+                        <use xlink:href="img/sprite.svg#drop"></use>
+                    </svg>
+                </button>
+                <ul class="contacts__list header__contacts">
+                    <li class="contacts__item flex aifs">
+                        <svg>
+                            <use xlink:href="img/sprite.svg#light-call"></use>
+                        </svg>
+                        <div>
+                            <a href="tel:+375299001001">+375 29 9-001-001</a>
+                            <span>a1 строка текста с описанием</span>
+                        </div>
+                    </li>
+                    <li class="contacts__item flex aifs">
+                        <svg>
+                            <use xlink:href="img/sprite.svg#light-call"></use>
+                        </svg>
+                        <div>
+                            <a href="tel:+375339001001">+375 33 9-001-001</a>
+                            <span>MTS</span>
+                        </div>
+                    </li>
+                    <li class="contacts__item">
+                        <svg>
+                            <use xlink:href="img/sprite.svg#light-clock"></use>
+                        </svg>
+                        Ежедневно с 10<sup>00</sup> - 22<sup>00</sup>
+                    </li>
+                    <li class="contacts__item">
+                        <svg>
+                            <use xlink:href="img/sprite.svg#light-pin"></use>
+                        </svg>
+                        г. Минск, пр-т. Победителей 9, 4 эт.
+                    </li>
+                    <li class="contacts__item flex aic">
+                        <span>@</span>
+                        mail@dji-minsk.by
+                    </li>
+                </ul>
+            </div>
             <button class="blue-btn top-header__call-btn" type="button">Заказать звонок</button>
         </div>
     </div>

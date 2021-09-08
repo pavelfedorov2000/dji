@@ -187,14 +187,11 @@
         font-weight: 300;
         margin-bottom: 25px;
     }
+}
 
-    // .burger-menu__contact-list
-
-    &__contact-list {}
-
-    // .burger-menu__contact-item
-
-    &__contact-item {
+.contacts {
+    &__item {
+        white-space: nowrap;
         font-size: 14px;
         line-height: 20px;
         color: #000000;
