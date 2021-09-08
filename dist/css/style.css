@@ -1110,10 +1110,6 @@ img {
   padding: 25px 35px;
 }
 
-.icons-slider {
-  overflow-x: visible;
-}
-
 .icons-slider__item {
   width: auto !important;
   font-size: 16px;
@@ -1993,8 +1989,8 @@ img {
     width: 35.11066%;
   }
 
-  .icons-slider {
-    padding: 18px 0;
+  .icons-slider-wrap {
+    padding: 18px 10px;
   }
 
   .icons-slider__item-img {
@@ -2278,8 +2274,8 @@ img {
             flex-direction: column-reverse;
   }
 
-  .icons-slider {
-    padding: 15px 0;
+  .icons-slider-wrap {
+    padding: 15px 5px;
   }
 
   .footer__main {
@@ -2517,6 +2513,10 @@ img {
     font-size: 10px;
     line-height: 21px;
     margin: 0 2.5px;
+  }
+
+  .icons-slider-wrap {
+    padding: 15px 0;
   }
 
   .burger-menu {

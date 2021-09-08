@@ -7,18 +7,21 @@
 
 .icons-slider-wrap {
     padding: 25px 35px;
-}
-
-.icons-slider {
-    overflow-x: visible;
 
     @media(max-width: 1024px) {
-        padding: 18px 0;
+        padding: 18px 10px;
     }
 
     @media(max-width: 768px) {
+        padding: 15px 5px;
+    }
+
+    @media(max-width: 575px) {
         padding: 15px 0;
     }
+}
+
+.icons-slider {
 
     // .icons-slider__item
 
