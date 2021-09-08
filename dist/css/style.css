@@ -1106,8 +1106,12 @@ img {
   display: flex;
 }
 
+.icons-slider-wrap {
+  padding: 25px 35px;
+}
+
 .icons-slider {
-  padding: 25px 0;
+  overflow-x: visible;
 }
 
 .icons-slider__item {
@@ -1454,7 +1458,7 @@ img {
 }
 
 .banner-slider__item-title span {
-  font-family: 'Museo Sans Cyrl 300';
+  font-family: 'Museo Sans Cyrl 500';
 }
 
 .banner-slider .swiper-button-prev,

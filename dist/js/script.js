@@ -75,14 +75,13 @@ window.addEventListener('DOMContentLoaded', () => {
 
     // Sliders
     const iconsSlider = new Swiper('.icons-slider', {
-        // Optional parameters
         slidesToShow: 'auto',
+        slidesToScroll: 3,
         //loop: true,
         spaceBetween: 48,
     });
     
     const bannerSlider = new Swiper('.banner-slider', {
-        // Optional parameters
         slidesToShow: 1,
         loop: true,
         navigation: {
