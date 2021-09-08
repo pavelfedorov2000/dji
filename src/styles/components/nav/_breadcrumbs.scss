@@ -1,0 +1,22 @@
+.breadcrumbs {
+    &__item {
+        position: relative;
+        display: inline-block;
+        font-size: 15px;
+        line-height: 18px;
+        color: #c4c4c4;
+        padding-right: 16px;
+        margin-right: 10px;
+        &:after {
+            content: url(../icons/arrows/crumb-arrow.svg);
+            position: absolute;
+            @extend %pos-center-y;
+            right: 0;
+        }
+        &:last-child {
+            &:after {
+                content: '';
+            }
+        }
+    }
+}

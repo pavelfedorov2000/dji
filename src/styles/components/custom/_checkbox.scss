@@ -1,0 +1,105 @@
+// ===================== CHECKBOXES, RADIO ==================== //
+.jq-checkbox,
+.jq-radio {
+    @extend %flex-center;
+    width: 23px;
+    height: 23px;
+    width: 23px;
+    height: 23px;
+    border: 1px solid #cdcdcd;
+    border-radius: 50%;
+    background: transparent;
+    box-shadow: none;
+    vertical-align: 0px;
+    margin-right: 9px;
+}
+
+.jq-checkbox.checked,
+.jq-radio.checked {
+    background: transparent;
+    border: 1px solid #cdcdcd;
+}
+
+.jq-checkbox.checked .jq-checkbox {
+    &__div {
+        width: 15px;
+        height: 15px;
+        margin: 0;
+        border-bottom: none;
+        border-left: none;
+        transform: rotate(0deg);
+    }
+}
+
+.jq-radio.checked .jq-radio {
+    &__div {
+        width: 15px;
+        height: 15px;
+        margin: 0;
+        border-bottom: none;
+        border-left: none;
+        transform: rotate(0deg);
+        background-color: transparent;
+        box-shadow: none;
+    }
+}
+
+// ===================== CHECKBOXES ==================== //
+.check-box {
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    clip: rect(0 0 0 0);
+    padding-left: 20px;
+}
+
+.check-style {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    //border: 2px solid ;
+    margin-left: -20px;
+}
+
+.check-box:checked+.check-style:before {
+    content: '';
+    width: 8px;
+    height: 8px;
+    //background-color: $accent;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+// ===================== RADIO ===================== //
+.radio-box {
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    clip: rect(0 0 0 0);
+    padding-left: 20px;
+}
+
+.radio-style {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    //border: 2px solid ;
+    margin-left: -20px;
+}
+
+.radio-box:checked+.radio-style:before {
+    content: '';
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    //background-color: $accent;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

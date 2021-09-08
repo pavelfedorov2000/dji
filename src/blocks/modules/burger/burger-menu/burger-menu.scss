@@ -1,0 +1,227 @@
+.burger-menu {
+    display: none;
+
+    @media (max-width: 900px) {
+        display: block;
+        position: fixed;
+        top: 0;
+        left: -100%;
+        z-index: 101;
+        width: 100%;
+        height: 100vh;
+        background-color: #fff;
+        transition: 0.5s left;
+        overflow: auto;
+    }
+
+    @media (max-width: 575px) {
+        width: 100%;
+    }
+
+    &--active {
+        @media (max-width: 900px) {
+            left: 0;
+        }
+    }
+}
+
+.burger-menu {
+
+    // .burger-menu__top
+
+    &__top {
+        background-color: #2C2C2C;
+        height: 88px;
+        padding: 15px;
+    }
+
+    // .burger-menu__back
+
+    &__back-btn,
+    &__submenu-back {
+        position: relative;
+        padding-left: 15px;
+        font-family: 'Museo Sans Cyrl 500';
+        font-size: 16px;
+        line-height: 10px;
+        color: #fff;
+
+        &:before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 6px;
+            height: 11px;
+            background-image: url(../img/icons/back.svg);
+        }
+    }
+
+    // .burger-menu__nav
+
+    &__nav {
+        position: relative;
+        z-index: 101;
+    }
+
+    // .burger-menu__list
+
+    &__list {}
+
+    // .burger-menu__item
+
+    &__item {
+        padding: 25px 15px;
+
+        &:not(:last-child) {
+            border-bottom: 1px solid #F5F5F5;
+        }
+    }
+
+    &__submenu {
+        position: absolute;
+        left: -100%;
+        //left: 0;
+        top: 0;
+        background-color: #fff;
+        z-index: 200;
+        width: 100%;
+        height: 100vh;
+
+        &--active {
+            left: 0;
+        }
+    }
+
+    &__sublist-link {
+        text-transform: uppercase;
+    }
+
+    &__submenu-title {
+        background-color: #F7F8F9;
+        padding: 25px 15px;
+        font-size: 14px;
+        line-height: 10px;
+        font-weight: 600;
+    }
+
+    // .burger-menu__link
+
+    &__link {
+        display: block;
+        font-size: 14px;
+        line-height: 10px;
+        color: #000;
+
+        /* &--drop {
+            position: relative;
+
+            &:before {
+                content: '';
+                position: absolute;
+                right: 0;
+                top: 50%;
+                transform: translateY(-50%);
+                width: 6px;
+                height: 10px;
+                background-image: url(../img/icons/next-arr.svg);
+            }
+        } */
+
+        &--active {
+            color: $blue;
+        }
+    }
+
+    &__item-drop {
+        width: 20px;
+
+        svg {
+            width: 6px;
+            height: 10px;
+        }
+    }
+
+    // .burger-menu__buttons
+
+    &__buttons {
+        background-color: #F7F8F9;
+
+        li {
+            border-top: 1px solid #DDDDDD;
+            padding: 25px 15px;
+        }
+    }
+
+    // .burger-menu__btn
+
+    &__btn {
+        svg {
+            width: 15px;
+            height: 15px;
+            flex-shrink: 0;
+            margin-right: 15px;
+        }
+    }
+
+    // .burger-menu__cart
+
+    &__cart {
+        span {
+            margin-left: 10px;
+        }
+    }
+
+    // .burger-menu__contact
+
+    &__contact {
+        padding: 25px 15px 15px;
+    }
+
+    // .burger-menu__contact-title
+
+    &__contact-title {
+        font-size: 14px;
+        line-height: 10px;
+        font-weight: 300;
+        margin-bottom: 25px;
+    }
+
+    // .burger-menu__contact-list
+
+    &__contact-list {}
+
+    // .burger-menu__contact-item
+
+    &__contact-item {
+        font-size: 14px;
+        line-height: 20px;
+        color: #000000;
+        padding: 10px 0;
+
+        &:not(:last-child) {
+            border-bottom: 1px solid #F7F8F9;
+        }
+
+        div span {
+            font-size: 11px;
+            color: #6B6F81;
+            display: block;
+        }
+
+        >span {
+            font-size: 20px;
+            line-height: 20px;
+            color: #DDDDDD;
+            margin-right: 12px;
+        }
+
+        svg {
+            width: 14px;
+            height: 14px;
+            flex-shrink: 0;
+            margin-right: 10px;
+        }
+    }
+}

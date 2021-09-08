@@ -1,0 +1,98 @@
+.btn {
+    text-align: center;
+    transition: .3s all;
+}
+
+.blue-btn {
+    @extend .btn;
+    font-family: 'Museo Sans Cyrl 700';
+    background: #1AA0E8;
+    border-radius: 3px;
+    color: #fff;
+}
+
+.border-btn {
+    @extend .btn;
+    font-family: 'Museo Sans Cyrl 500';
+    border: 1px solid #ddd;
+    filter: drop-shadow(0px 5px 15px rgba(0, 0, 0, 0.1));
+    color: #505359;
+
+    @media (any-hover: hover) {
+        &:hover {
+            background-color: #505359;
+            color: #fff;
+        }
+    }
+}
+
+.counter {
+    background-color: #F5F5F5;
+
+    // .counter__btn
+
+    &__btn {
+        position: relative;
+        width: 15px;
+        height: 15px;
+        background-color: transparent;
+        cursor: pointer;
+
+        @media(max-width: 575px) {
+            width: 10px;
+            height: 10px;
+        }
+
+        &.minus-btn {
+
+            &:after {
+                display: none;
+            }
+        }
+
+        &:before,
+        &:after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #424242;
+        }
+
+        &:before {
+            width: 8px;
+            height: 1px;
+
+            @media(max-width: 575px) {
+                width: 5px;
+            }
+        }
+
+        &:after {
+            width: 1px;
+            height: 8px;
+
+            @media(max-width: 575px) {
+                height: 5px;
+            }
+        }
+    }
+
+    // .counter__input
+
+    &__input {
+        width: 15px;
+        font-size: 13px;
+        line-height: 21px;
+        color: #424242;
+        text-align: center;
+        margin: 0 5px;
+
+        @media(max-width: 575px) {
+            font-size: 10px;
+            line-height: 21px;
+            margin: 0 2.5px;
+        }
+    }
+}

@@ -1,0 +1,36 @@
+.burger-btn {
+    display: none;
+
+    @media (max-width: 900px) {
+        display: flex;
+        width: 31px;
+        height: 22px;
+        cursor: pointer;
+    }
+
+    &__item {
+        display: block;
+        width: 100%;
+        height: 4px;
+        background-color: #fff;
+        transition: 0.5s all;
+    }
+
+    &--active {
+        .burger-btn__item {
+            &:nth-child(1) {
+                transform: rotate(45deg);
+                margin-top: 12px;
+            }
+
+            &:nth-child(2) {
+                display: none;
+            }
+
+            &:nth-child(3) {
+                transform: rotate(-45deg);
+                margin-bottom: 12px;
+            }
+        }
+    }
+}

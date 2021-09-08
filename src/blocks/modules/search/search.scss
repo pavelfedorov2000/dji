@@ -1,0 +1,109 @@
+.search-form {
+    height: 35px;
+
+    @media(max-width: 900px) {
+        padding: 0 15px;
+    }
+
+    // .search-form__input
+
+    &__input {
+        width: (690px - 36px) / $container * 100%;
+        flex-grow: 1;
+        background: #FFFFFF;
+        border-radius: 3px;
+        padding: 0 16px;
+        font-size: 14px;
+        line-height: 18px;
+        color: #333;
+
+        @media(max-width: 1024px) {
+            width: (385px - 36px) / (1024px - 30px) * 100%;
+        }
+
+        @media(max-width: 900px) {
+            width: calc(100vw - 30px - 36px);
+            border: 1px solid #F5F5F5;
+            box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 3px;
+            font-size: 12px;
+            line-height: 18px;
+            color: #333;
+        }
+
+        &::placeholder {
+            color: #6B6F81;
+        }
+    }
+
+    // .search-form__btn
+
+    &__btn {
+        width: 36px;
+        height: 100%;
+        background-color: $blue;
+
+        @media(max-width: 900px) {
+            border-radius: 0px 3px 3px 0px;
+        }
+
+        svg {
+            width: 13px;
+            height: 13px;
+        }
+    }
+}
+
+.drop-search {
+
+    position: fixed;
+    top: -100%;
+    left: 0;
+    right: 0;
+    z-index: 101;
+    width: 100%;
+    height: 100vh;
+    background-color: #fff;
+    transition: .3s top;
+
+    &--active {
+        top: 0;
+    }
+
+    // .drop-search__top
+
+    &__top {
+        background-color: #2C2C2C;
+        height: 88px;
+        padding: 15px;
+        margin-bottom: 15px;
+    }
+
+    // .drop-search__title
+
+    &__title {
+        font-size: 16px;
+        line-height: 10px;
+        color: #fff;
+
+        svg {
+            width: 12px;
+            height: 12px;
+            flex-shrink: 0;
+            margin-right: 10px;
+        }
+    }
+
+    // .drop-search__close-btn
+
+    &__close-btn {
+        svg {
+            width: 12px;
+            height: 12px;
+        }
+    }
+
+    .search-form {
+        display: flex;
+    }
+}

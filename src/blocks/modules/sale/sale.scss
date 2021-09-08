@@ -1,0 +1,397 @@
+.s-sale {
+    //padding-top: 20px;
+    padding-bottom: 30px;
+
+    @media(max-width: 768px) {
+        padding-bottom: 20px;
+    }
+
+    &__title {
+        margin-top: 20px;
+        margin-bottom: 4px;
+
+        @media(max-width: 1024px) {
+            display: none;
+        }
+    }
+
+    &__cards {
+        &:nth-of-type(1) {
+            @media(max-width: 1024px) {
+                display: none;
+            }
+        }
+
+        >* {
+            @media(max-width: 575px) {
+                margin-bottom: 5px;
+            }
+        }
+    }
+}
+
+.sale-card {
+
+    position: relative;
+    justify-content: space-between;
+    width: 20%;
+    min-height: 476px;
+    padding: 57px 20px 18px 18px;
+    border: 0.5px solid #DDDDDD;
+    transition: .3s box-shadow;
+
+    @media(max-width: 575px) {
+        min-height: 307px;
+        padding: 27px 5px 10px;
+    }
+
+    &:nth-child(5) {
+        @media(max-width: 1024px) {
+            display: none;
+        }
+    }
+
+    &:nth-child(4) {
+        @media(max-width: 768px) {
+            display: none;
+        }
+
+        @media(max-width: 575px) {
+            display: flex;
+        }
+    }
+
+    @media(max-width: 1024px) {
+        width: 25%;
+    }
+
+    @media(max-width: 768px) {
+        width: 33.3333%;
+    }
+
+    @media(max-width: 575px) {
+        width: 50%;
+    }
+
+    @media (any-hover: hover) {
+        &:hover {
+            box-shadow: 0px 4px 20px rgba(96, 96, 96, 0.25);
+        }
+    }
+
+    &__labels {
+        position: absolute;
+        top: 18px;
+        left: 18px;
+
+        @media(max-width: 575px) {
+            top: 5px;
+            left: 5px;
+        }
+    }
+
+    // .sale-card__label
+
+    &__label {
+        display: none;
+        padding: 2px 6px;
+        text-align: center;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 700;
+        font-size: 10px;
+        line-height: 20px;
+        color: #fff;
+
+        @media(max-width: 575px) {
+            font-size: 8px;
+            line-height: 13px;
+        }
+
+        &.sale {
+            background-color: $red;
+        }
+
+        &.recommend {
+            background-color: #893CA9;
+        }
+
+        &.hit {
+            background-color: #FFC438;
+            color: #464855;
+        }
+
+        &.new {
+            background-color: #2992D9;
+        }
+    }
+
+    &__label+&__label {
+        margin-left: 8px;
+    }
+
+    // .sale-card__img
+
+    &__img {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 200px;
+        height: 200px;
+        border: 1px solid #F7F8F9;
+        margin: 0 auto 15px;
+
+        @media(max-width: 575px) {
+            width: 135px;
+            height: 135px;
+            margin-bottom: 6px;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    // .sale-card__title
+
+    &__title {
+        font-size: 14px;
+        line-height: 20px;
+        font-weight: 300;
+        color: #464855;
+        flex: 1 1 auto;
+        margin-bottom: 20px;
+
+        @media(max-width: 575px) {
+            font-size: 10px;
+            line-height: 14px;
+            margin-bottom: 7px;
+        }
+    }
+
+    &__price-block {
+        flex: 1 1 auto;
+        margin-bottom: 20px;
+
+        @media(max-width: 575px) {
+            margin-bottom: 11px;
+        }
+    }
+
+    &__prices {
+        margin-bottom: 10px;
+
+        @media(max-width: 575px) {
+            margin-bottom: 4px;
+        }
+    }
+
+    // .sale-card__new-price
+
+    &__new-price {
+        font-family: 'Museo Sans Cyrl 700';
+        //font-weight: 600;
+        font-size: 18px;
+        line-height: 21px;
+
+        @media(max-width: 575px) {
+            font-size: 11px;
+        }
+    }
+
+    // .sale-card__old-price
+
+    &__old-price {
+        display: none;
+        position: relative;
+        font-size: 12px;
+        line-height: 21px;
+        text-decoration-line: line-through;
+        color: #6B6F81;
+        margin-left: 7px;
+
+        @media(max-width: 575px) {
+            font-size: 8px;
+        }
+
+        &:before {
+            content: '';
+            position: absolute;
+
+        }
+    }
+
+    // .sale-card__economy
+
+    &__economy {
+        display: none;
+        border: 2px solid $red;
+        padding: 2px 6px;
+        font-family: 'Montserrat',
+            sans-serif;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 16px;
+        text-align: center;
+        color: #464855;
+
+        @media(max-width: 575px) {
+            padding-left: 5px;
+            padding-right: 5px;
+            font-size: 8px;
+            line-height: 16px;
+        }
+    }
+
+    // .sale-card__btn
+
+    &__btn {
+        @extend .btn;
+        background-color: $blue;
+        padding: 12px;
+        border: 0.5px solid #DDDDDD;
+        font-size: 13px;
+        line-height: 16px;
+        font-family: 'Museo Sans Cyrl 700';
+        color: #fff;
+        text-transform: uppercase;
+
+        @media(max-width: 1024px) {
+            padding-left: 5px;
+            padding-right: 5px;
+        }
+
+        @media(max-width: 575px) {
+            font-size: 8px;
+            line-height: 10px;
+            padding-top: 5px;
+            padding-bottom: 5px;
+        }
+
+        &--disabled {
+            display: none;
+            background-color: #F5F5F5;
+            color: #333;
+            width: 100%;
+            font-family: 'Museo Sans Cyrl 500';
+        }
+
+        &--basket {
+            display: none;
+            background-color: #4FAD03;
+            width: 100%;
+            font-family: 'Museo Sans Cyrl 700';
+        }
+
+        &--preorder {
+            display: none;
+            background-color: $red;
+            width: 116px;
+            margin: 0 auto;
+
+            @media(max-width: 575px) {
+                width: 65px;
+            }
+        }
+
+        &--disabled,
+        &--basket,
+        &--preorder {
+            .sale-card {
+                &__buttons {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    // .sale-card__buttons
+
+    &__buttons {
+        grid-gap: 10px;
+    }
+
+    &--discount {
+        .sale-card {
+            &__label.sale {
+                display: inline-block;
+            }
+
+            &__old-price {
+                display: inline-block;
+            }
+
+            &__economy {
+                display: inline-block;
+            }
+        }
+    }
+
+    &--preorder {
+        .sale-card {
+            &__buttons {
+                display: none;
+            }
+
+            &__btn--preorder {
+                display: block;
+            }
+        }
+    }
+
+    &--out-of-production {
+        .sale-card {
+            &__new-price {
+                color: #C4C4C4;
+            }
+        }
+    }
+
+    &--out-of-production,
+    &--in-basket {
+        .sale-card {
+
+            &__labels,
+            &__buttons {
+                display: none;
+            }
+        }
+    }
+
+    &--out-of-production {
+        .sale-card__btn--disabled {
+            display: block;
+        }
+    }
+
+    &--in-basket {
+        .sale-card__btn--basket {
+            display: block;
+        }
+    }
+
+    &--discount {
+        .sale-card__label.sale {
+            display: inline-block;
+        }
+    }
+
+    &--hit {
+        .sale-card__label.hit {
+            display: inline-block;
+        }
+    }
+
+    &--recommend {
+        .sale-card__label.recommend {
+            display: inline-block;
+        }
+    }
+
+    &--new {
+        .sale-card__label.new {
+            display: inline-block;
+        }
+    }
+}

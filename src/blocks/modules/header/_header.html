@@ -1,0 +1,72 @@
+<header class="header">
+    <div class="header__top top-header">
+        <div class="container header__top-inner flex jcsb aic">
+            <div class="top-header__address flex aic">
+                <svg>
+                    <use xlink:href="img/sprite.svg#pin"></use>
+                </svg>
+                г. Минск, пр-т Победителей 9, 4 этаж
+            </div>
+            <div class="top-header__time flex aic">
+                <svg>
+                    <use xlink:href="img/sprite.svg#clock"></use>
+                </svg>
+                с 10:00 до 22:00
+            </div>
+            <a href="#" class="top-header__inst">
+                <svg>
+                    <use xlink:href="img/sprite.svg#inst"></use>
+                </svg>
+            </a>
+            <a href="tel:+375299001001" class="top-header__phone flex aic">
+                <svg>
+                    <use xlink:href="img/sprite.svg#call"></use>
+                </svg>
+                +375 29 9-001-001
+            </a>
+            <button class="blue-btn top-header__call-btn" type="button">Заказать звонок</button>
+        </div>
+    </div>
+    <div class="header__main">
+        <div class="container flex jcsb aic">
+            @@include('../burger/burger-btn/_burger-btn.html')
+            <a class="header__logo flex aic" href="#">
+                <img class="header__logo-img" src="img/logo/black-logo.png" alt="Логотип Dji">
+                <img class="header__logo-img--tablet" src="img/logo/white-logo.png" alt="Логотип Dji">
+                <span class="header__logo-descr">Autorized retail store</span>
+            </a>
+            <a href="tel:+375299001001" class="header__phone">
+                <svg>
+                    <use xlink:href="img/sprite.svg#blue-call"></use>
+                </svg>
+            </a>
+            <button class="header__search-btn" type="button">
+                <svg>
+                    <use xlink:href="img/sprite.svg#search"></use>
+                </svg>
+            </button>
+            <form action="#" class="header__search search-form flex" autocomplete="off">
+                <input class="search-form__input" name="search" placeholder="Поиск...">
+                <button class="search-form__btn flex jcc aic" type="submit">
+                    <svg>
+                        <use xlink:href="img/sprite.svg#search"></use>
+                    </svg>
+                </button>
+            </form>
+            <button class="header__enter-btn flex aic" type="button">
+                <svg>
+                    <use xlink:href="img/sprite.svg#user"></use>
+                </svg>
+                Вход
+            </button>
+            <button class="header__register" type="button">Регистрация</button>
+            <a href="#" class="cart header__basket">
+                <svg>
+                    <use xlink:href="img/sprite.svg#cart"></use>
+                </svg>
+                <span>99</span>
+            </a>
+        </div>
+    </div>
+    @@include('./_header__menu.html')
+</header>

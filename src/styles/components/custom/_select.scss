@@ -1,0 +1,56 @@
+.jq-selectbox {
+    &__select {
+        height: 20px;
+        padding: 0 25px 0 0;
+        border-bottom-color: #b3b3b3;
+        border-radius: 0;
+        background: transparent;
+        //font-family: $second-font;
+        color: rgba(0, 0, 0, 0.6);
+        font-size: 14px;
+        line-height: 17px;
+        box-shadow: none;
+        text-shadow: none;
+        border: none;
+        &:hover {
+            background: transparent;
+        }
+        &:active {
+            background: transparent;
+            box-shadow: none;
+        }
+    }
+    &__trigger {
+        position: absolute;
+        top: 7px;
+        right: 9px;
+        width: 12px;
+        height: 8px;
+        background-image: url(../icons/arrows/drop-arrow.svg);
+        transform: rotate(0deg);
+        border-left: none;
+    }
+    &__trigger-arrow {
+        position: absolute;
+        top: 14px;
+        right: 12px;
+        width: 0;
+        height: 0;
+        border: none;
+    }
+    li {
+        color: rgba(0, 0, 0, 0.6);
+        &:hover {
+            background: rgba(107, 126, 172, 0.05);
+            color: rgba(0, 0, 0, 0.6);
+        }
+    }
+    li.selected {
+        background-color: transparent;
+        color: rgba(0, 0, 0, 0.6);
+    }
+    &__dropdown {
+        border-radius: 0;
+        padding-top: 15px;
+    }
+}

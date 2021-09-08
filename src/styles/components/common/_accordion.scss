@@ -1,0 +1,25 @@
+.accordion {
+    &__item {
+    }
+    &__item-summary {
+        position: relative;
+        &:after {
+            content: '';
+            position: absolute;
+            @extend %pos-center-y;
+            left: 0px;
+            width: 6px;
+            height: 4px;
+            background-image: url(../img/icons/arrows/drop-arrow.svg);
+            transition: 0.3s transform;
+        }
+        &--active {
+            &:after {
+                transform: rotate(180deg) translateY(-50%);
+            }
+        }
+    }
+    &__item-details {
+        display: none;
+    }
+}

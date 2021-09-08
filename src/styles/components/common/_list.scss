@@ -1,0 +1,13 @@
+ol.counter {
+    counter-reset: num;
+
+    li {
+        position: relative;
+
+        &:before {
+            content: counter(num);
+            counter-increment: num;
+            position: absolute;
+        }
+    }
+}
