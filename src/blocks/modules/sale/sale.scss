@@ -93,7 +93,7 @@
     // .sale-card__label
 
     &__label {
-        display: none;
+        display: inline-block;
         padding: 2px 6px;
         text-align: center;
         font-family: 'Montserrat', sans-serif;
@@ -314,9 +314,6 @@
 
     &--discount {
         .sale-card {
-            &__label.sale {
-                display: inline-block;
-            }
 
             &__old-price {
                 display: inline-block;
@@ -368,30 +365,6 @@
     &--in-basket {
         .sale-card__btn--basket {
             display: block;
-        }
-    }
-
-    &--discount {
-        .sale-card__label.sale {
-            display: inline-block;
-        }
-    }
-
-    &--hit {
-        .sale-card__label.hit {
-            display: inline-block;
-        }
-    }
-
-    &--recommend {
-        .sale-card__label.recommend {
-            display: inline-block;
-        }
-    }
-
-    &--new {
-        .sale-card__label.new {
-            display: inline-block;
         }
     }
 }

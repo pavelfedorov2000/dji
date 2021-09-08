@@ -1701,7 +1701,7 @@ img {
 }
 
 .sale-card__label {
-  display: none;
+  display: inline-block;
   padding: 2px 6px;
   text-align: center;
   font-family: 'Montserrat', sans-serif;
@@ -1854,10 +1854,6 @@ img {
   grid-gap: 10px;
 }
 
-.sale-card--discount .sale-card__label.sale {
-  display: inline-block;
-}
-
 .sale-card--discount .sale-card__old-price {
   display: inline-block;
 }
@@ -1891,22 +1887,6 @@ img {
 
 .sale-card--in-basket .sale-card__btn--basket {
   display: block;
-}
-
-.sale-card--discount .sale-card__label.sale {
-  display: inline-block;
-}
-
-.sale-card--hit .sale-card__label.hit {
-  display: inline-block;
-}
-
-.sale-card--recommend .sale-card__label.recommend {
-  display: inline-block;
-}
-
-.sale-card--new .sale-card__label.new {
-  display: inline-block;
 }
 
 .news__content {
