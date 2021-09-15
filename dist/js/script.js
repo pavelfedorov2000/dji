@@ -92,9 +92,10 @@ window.addEventListener('DOMContentLoaded', () => {
 
     // Sliders
     const iconsSlider = new Swiper('.icons-slider', {
-        slidesToShow: 'auto',
+        slidesPerView: 'auto',
         freeMode: true,
-        spaceBetween: 48,
+        freeModeMomentum: true,
+        //spaceBetween: 48,
     });
     
     const bannerSlider = new Swiper('.banner-slider', {

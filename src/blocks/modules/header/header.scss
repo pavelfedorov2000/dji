@@ -93,6 +93,10 @@
         opacity: 0;
         transition: .3s all;
 
+        @media(max-width: 900px) {
+            display: none;
+        }
+
         &--active {
             visibility: visible;
             opacity: 1;
